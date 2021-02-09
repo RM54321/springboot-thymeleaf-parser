@@ -1,0 +1,361 @@
+/* Reset margin */
+*{
+	margin:0px;
+ }
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+    }
+
+/* Logo Styling */
+.logo{
+	position:relative;
+	left:-90px;
+     }
+     
+/* Channel Id for each channel*/
+.channelid{
+	display:inline;
+	justify-content:space-between;
+	position:relative;
+	font-weight: bold;
+	      }
+	
+/* Temperature Styling */
+.temptext{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:24px;
+	     }
+	     
+.temp{
+	position:relative;
+	left:80px;
+	font-size:65px;
+	padding:20px;
+	}
+
+/* Latitude Field Styling */
+.latitudetext{
+	position:relative;
+	padding:20px;
+	left:106px;
+	font-weight: bold;
+	font-size:24px;
+	         }
+	
+.gpstext{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:24px;
+       }
+
+.latvalue{
+	position:relative;
+	left:68px;
+	font-size:65px;
+	padding:20px;
+}
+
+/* Longitude Field Styling */
+.longitudetext{
+	position:relative;
+	padding:20px;
+	left:106px;
+	font-weight: bold;
+	font-size:24px;
+              }
+
+.longvalue{
+	position:relative;
+	left:70px;
+	font-size:65px;
+	padding:20px;
+         }
+
+/* Acc:x Field Styling */
+.acctext{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:24px;
+	    }
+
+.accxtext{
+	position:relative;
+	padding:20px;
+	left:106px;
+	font-weight: bold;
+	font-size:24px;	
+         }
+
+
+.accxvalue{
+	position:relative;
+	left:85px;
+	font-size:65px;
+	}
+
+/* Acc:y Field Styling */
+.accytext{
+	position:relative;
+	padding:20px;
+	left:106px;
+	font-weight: bold;
+	font-size:24px;
+	}
+
+.accyvalue{
+	position:relative;
+	left:85px;
+	font-size:65px;
+          }
+
+/* Acc:z Field Styling */
+.accztext{
+	position:relative;
+	left:106px;
+	font-weight: bold;
+	font-size:24px;
+	padding:20px;
+	      }
+
+.acczvalue{
+	position:relative;
+	left:65px;
+	font-size:65px;
+	padding:20px;
+	      }
+	
+/* Gyro:x Field Styling */
+.gyrotext{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:24px;
+         }
+
+.gyroxtext{
+    position:relative;
+	padding:20px;
+	left:106px;
+	font-weight: bold;
+	font-size:24px;
+	      }
+
+.gyroxvalue{
+	position:relative;
+	left:85px;
+	font-size:65px;
+           }
+
+/* Gyro:y Field Styling */
+.gyroytext{
+	position:relative;
+	padding:20px;
+	left:106px;
+	font-weight: bold;
+	font-size:24px;
+	      }
+
+.gyroyvalue{
+	position:relative;
+	left:85px;
+	font-size:65px;
+}
+
+/* Gyro:z Field Styling */
+.gyroztext{
+	position:relative;
+	padding:20px;
+	left:106px;
+	font-weight: bold;
+	font-size:24px;
+	       }
+
+.gyrozvalue{
+	position:relative;
+	left:68px;
+	font-size:65px;
+	padding:20px;
+	        }
+
+
+/* Digital Input Field Styling */
+.digitalinputtext{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:24px;
+	             }
+	             
+.digitalInput{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:65px;
+             }
+
+/* Barometer Field Styling */
+.bartext{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:24px;
+	    }
+	    
+.barometricPressure{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:65px;
+                    }
+
+
+/* Digital Output Field Styling */
+.digitaloutputtext{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:24px;
+	             }
+.digitalOutput{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:65px;
+              }
+
+/* Analog Input Field Styling */
+.analoginputtext{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:24px;
+	            }
+.analogInput{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:65px;
+            }
+
+/* Analog Output Field Styling */
+.analogoutputtext{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:24px;
+	              }
+	              
+.analogOutput{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:65px;
+             }
+
+/* Luminosity Field Styling */
+.lumitext{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:24px;
+	      }
+.luminosity{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:65px;
+           }
+
+/* Presence Field Styling */
+
+.presencetext{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:24px;
+	       }
+	       
+.presence{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:65px;
+         }
+
+/* Relative Humidity Field Styling */
+.reltext{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:24px;
+        }
+.relativeHumidity{
+	position:relative;
+	padding:20px;
+	left:80px;
+	font-weight: bold;
+	font-size:65px;
+                  }
+
+/* Styling for payload fields with more than one value */
+.para{
+	height:17px;
+      }
+
+/* data container in main */
+.container{
+	position:relative;
+	left:20px;
+	padding-left:10px;
+	min-height: -webkit-calc(100% - 100px); /* Chrome */
+    min-height: -moz-calc(100% - 100px);   /* Firefox */
+    min-height: calc(100% - 100px); /* native */
+}
+
+/* App details at bottom */
+footer{
+position:relative;
+left:50px;
+font-style: italic;
+      }
+
+/* styling for horizontal ruler for channel divider */
+.half {
+	position: relative;
+    left: 2px;
+    border-color:#fafafa;
+    color:#fafafa;
+    background-color:#fafafa;
+       }
+
+/* Error messages styling */
+.error{
+	color:red;
+}
+
+

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Channel View</title>
+	<link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+<div class="logo">
+<img src="../static/img/nearsightlogo.png" th:src="@{img/nearsightlogo.png}"/>
+</div>
+<main role="main" class="container">
+    <div class="error" th:if="${errorMessage}"  th:text="${errorMessage}">Error</div>
+    <div class="showData">
+		 <div th:each="channelDetail : ${channelDetails}">
+		      <div th:each="field,status: ${channelDetail.channels}">
+		      Channel  <div class="channelid" th:text="${field.channel}"></div>
+		       <div th:each="inner,iter:${field.payloadFields}">
+					<div class="temptext" th:text="Temperature" th:if="${inner.temperature ne null}"></div> 
+				    <div class="temp" th:text="${inner.temperature.value}" th:if="${inner.temperature ne null}"></div>
+				    <div class="gpstext" th:text="Gps" th:if="${inner.gps ne null}"></div>
+					<span class="latitudetext" th:text="'Latitude:'" th:if="${inner.gps ne null}"></span>
+				    <span class="latvalue" th:text="${inner.gps.latitude}" th:if="${inner.gps ne null}"></span>
+					<br th:if="${inner.gps ne null}"/>
+					<span class="longitudetext" th:text="'Longitude:'" th:if="${inner.gps ne null}"></span>
+					<span class="longvalue" th:text="${inner.gps.longitude}" th:if="${inner.gps ne null}"></span>
+					<p class="para" th:if="${inner.gps ne null}"> </p>
+					<div class="acctext" th:text="Accelerometer" th:if="${inner.accelerometer ne null}"></div>
+					<span class="accxtext" th:text="'x:'" th:if="${inner.accelerometer ne null}"></span>
+					<span class="accxvalue" th:text="${inner.accelerometer.x}" th:if="${inner.accelerometer ne null}"></span>
+					<br th:if="${inner.accelerometer ne null}" />
+					<span class="accytext" th:text="'y:'" th:if="${inner.accelerometer ne null}"></span>
+					<span class="accyvalue" th:text="${inner.accelerometer.y}" th:if="${inner.accelerometer ne null}"></span>
+					<br th:if="${inner.accelerometer ne null}" />
+					<span class="accztext"  th:text="'z:'" th:if="${inner.accelerometer ne null}"></span>
+					<span class="acczvalue" th:text="${inner.accelerometer.z}" th:if="${inner.accelerometer ne null}"></span>
+					<p class="para" th:if="${inner.accelerometer ne null}"> </p>
+					<div class="gyrotext" th:text="Gyrometer" th:if="${inner.gyrometer ne null}"></div>
+				    <span class="gyroxtext" th:text="'x:'" th:if="${inner.gyrometer ne null}"></span>
+				    <span class="gyroxvalue" th:text="${inner.gyrometer.x}" th:if="${inner.gyrometer ne null}"></span>
+				    <br th:if="${inner.gyrometer ne null}"/>
+					<span class="gyroytext" th:text="'y:'" th:if="${inner.gyrometer ne null}"></span>
+				    <span class="gyroyvalue" th:text="${inner.gyrometer.y}" th:if="${inner.gyrometer ne null}"></span>
+				    <br th:if="${inner.gyrometer ne null}"/>
+					<span class="gyroztext" th:text="'z:'" th:if="${inner.gyrometer ne null}"></span>
+					<span class="gyrozvalue" th:text="${inner.gyrometer.z}" th:if="${inner.gyrometer ne null}"></span>
+				    <p class="para" th:if="${inner.gyrometer ne null}"> </p>
+					<div class="digitalinputtext" th:text="DigitalInput" th:if="${inner.digitalInput ne null}"></div>
+					<div class="digitalInput" th:text="${inner.digitalInput.value}" th:if="${inner.digitalInput ne null}"></div>
+				    <div class="bartext" th:text="Barometer" th:if="${inner.barometricPressure ne null}"></div>
+					<div class="barometricPressure" th:text="${inner.barometricPressure.value}" th:if="${inner.barometricPressure ne null}"></div>
+				    <div class="digitaloutputtext" th:text="DigitalOutput" th:if="${inner.digitalOutput ne null}"></div><div class="digitalOutput" th:text="${inner.digitalOutput.value}" th:if="${inner.digitalOutput ne null}"></div>
+					<div class="analoginputtext" th:text="AnalogInput" th:if="${inner.analogInput ne null}"></div><div class="analogInput" th:text="${inner.analogInput.value}" th:if="${inner.analogInput ne null}"></div>
+					<div class="analogoutputtext" th:text="AnalogOutput" th:if="${inner.analogOutput ne null}"></div><div class="analogOutput" th:text="${inner.analogOutput.value}" th:if="${inner.analogOutput ne null}"></div>
+					<div class="lumitext" th:text="Luminosity" th:if="${inner.luminosity ne null}"></div> <div class="luminosity" th:text="${inner.luminosity.value}" th:if="${inner.luminosity ne null}"></div>
+					<div class="presencetext" th:text="Presence" th:if="${inner.presence ne null}"></div><div class="presence" th:text="${inner.presence.value}" th:if="${inner.presence ne null}"></div>
+				    <div class="reltext" th:text="RelativeHumidity" th:if="${inner.relativeHumidity ne null}"></div><div class="relativeHumidity" th:text="${inner.relativeHumidity.value}" th:if="${inner.relativeHumidity ne null}"></div>
+				    <div th:unless="${status.last}"><hr class="half"/></div>
+		 	</div>
+		 	</div>
+		 </div><!-- channel detail ends here -->    
+  </div><!-- showData div ends -->
+</main>
+<footer>
+ <div th:each="channelDetail : ${channelDetails}">
+ 	<span class="appidtext" th:text="'AppId:'" th:if="${channelDetail.appId ne null}"></span><span th:text="${channelDetail.appId}" th:if="${channelDetail.appId ne null}"></span>
+ 	<div></div>
+ 	<span class="devidtext" th:text="'DeviceId:'" th:if="${channelDetail.devId ne null}"></span><span th:text="${channelDetail.devId}" th:if="${channelDetail.devId ne null}"></span>
+    <div></div>
+    <span class="idtext" th:text="'Id:'" th:if="${channelDetail.id ne null}"></span><span th:text="${channelDetail.id}" th:if="${channelDetail.id ne null}"></span>
+    <div></div>
+    <span class="lastupdatedtext" th:text="'LastUpdated:'" th:if="${channelDetail.lastSeen ne null}"></span><span th:text="${channelDetail.lastSeen}" th:if="${channelDetail.lastSeen ne null}"></span>
+ </div>
+</footer>
+<script src="js/custom.js"></script>
+</body>
+</html>
