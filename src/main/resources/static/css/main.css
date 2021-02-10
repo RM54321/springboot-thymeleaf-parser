@@ -11,7 +11,8 @@ body{
 /* Logo Styling */
 .logo{
 	position:relative;
-	left:-90px;
+	top:-78px;
+	left:-86px;
      }
      
 /* Channel Id for each channel*/
@@ -335,6 +336,7 @@ body{
 	min-height: -webkit-calc(100% - 100px); /* Chrome */
     min-height: -moz-calc(100% - 100px);   /* Firefox */
     min-height: calc(100% - 100px); /* native */
+    top:-135px;
 }
 
 /* App details at bottom */
@@ -342,6 +344,9 @@ footer{
 position:relative;
 left:50px;
 font-style: italic;
+font-weight: normal;
+bottom:120px;
+font-size:12px;
       }
 
 /* styling for horizontal ruler for channel divider */
